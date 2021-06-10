@@ -29,7 +29,7 @@ This was installed on Raspberry Pi with an additional USB NIC
 eth0 - OS Traffic, used for ZeroTier and other attacks  
 eth1 - The bridge port/switch port, the port used by the remote system  
 scanner - the nessus scanning box  
-remote - the PBJ Raspberry Pi  
+remote - the ONCL2S Raspberry Pi  
 
 ## Config
 
@@ -124,7 +124,7 @@ remote - the PBJ Raspberry Pi
 
 # Results
 
-![Results](https://github.com/nickcage710/pbj/blob/master/images/2020-09-29_18-52_1.png)
+![Results](https://github.com/nickcage710/ONCL2S/blob/main/images/2020-09-29_18-52_1.png)
 
 # Troubleshooting
 
