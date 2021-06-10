@@ -147,9 +147,8 @@ remote - the PBJ Raspberry Pi
 
 Notes from 3/15/2021
 
-1: add br-zt to a startup script
-2: add kali instructions for zero tier (git clone, make, make install, zerotier-one -d, zerotier-cli join ####)
-3: 
+1: add br-zt to a startup script 
+2: add kali instructions for zero tier (git clone, make, make install, zerotier-one -d, zerotier-cli join ####) 
 
 
 
