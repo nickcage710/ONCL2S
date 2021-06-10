@@ -55,11 +55,11 @@ remote - the ONCL2S Raspberry Pi
 
 ##### Set ZeroTier to ethernet bridge 
 
-![ethernet bridge settings](https://github.com/nickcage710/pbj/blob/master/images/2020-09-29_19-25.png)
+![ethernet bridge settings](https://github.com/nickcage710/ONCL2S/blob/main/images/2020-09-29_19-25.png)
 
 ##### Disable IP assignment globally and routing
 
-![IP addresses and routing](https://github.com/nickcage710/pbj/blob/master/images/2020-09-29_19-25_1.png)
+![IP addresses and routing](https://github.com/nickcage710/ONCL2S/blob/main/images/2020-09-29_19-25_1.png)
 
 # Reboot
 
