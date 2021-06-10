@@ -1,0 +1,21 @@
+[Unit]
+Description=ZeroTier Controller Container
+After=docker.service
+Requires=docker.service
+
+[Service]
+TimeoutStartSec=0
+Restart=always
+ExecStartPre=-/usr/bin/docker stop ztncui
+ExecStartPre=-/usr/bin/docker rm ztncui
+ExecStartPre=/usr/bin/docker pull keynetworks/ztncui
+EnvironmentFile=/run/zerotier-container.env
+ExecStart=/usr/bin/docker run -p 3443:3443 --rm --name ztncui --volume /opt/zerotier/ztncui:/opt/key-networks/ztncui/etc/ --volume /opt/zerotier/zt1:/var/lib/zerotier-one/ --cap-add=NET_ADMIN keynetworks/ztncui
+ExecStartPost=/usr/bin/sleep 5s
+ExecStartPost=/usr/bin/docker exec ztncui apt-get update
+ExecStartPost=/usr/bin/docker exec ztncui apt-get install -y iptables
+ExecStartPost=/usr/bin/docker exec ztncui iptables -I INPUT -i eth0+ ! -s 172.17.0.1 -p tcp --dport 3443 -j DROP
+ExecStop=/usr/bin/docker stop ztncui
+
+[Install]
+WantedBy=multi-user.target
