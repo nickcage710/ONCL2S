@@ -1,0 +1,10 @@
+[Unit]
+After=network.target zerotier-one.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/sbin/ifconfig eth1 up
+
+[Install]
+WantedBy=multi-user.target
